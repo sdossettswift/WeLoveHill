@@ -1,0 +1,6 @@
+<%= simple_form_for @photo, url: photos_path do |f| %>
+  <%= f.input :image, as: :file , label: "Your favorite pic of Hill  "%>
+  <%= f.input :caption %>
+  <%= f.input :source, label: "Your name" %>
+  <%= f.button :submit%>
+<% end %>

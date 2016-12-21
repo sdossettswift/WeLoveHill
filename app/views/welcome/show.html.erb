@@ -1,0 +1,25 @@
+
+<div>
+ <div id="wrapper">
+ 	<div id="wishes">
+ 		<h1>Wishes</h1>
+ 			<% @wishes.each do |w|%>
+ 			<p><%= w.body%> - <%= w.source%></p>
+ 		<%end%>
+ 	</div>
+ 	<div id="photos">
+ 		<h1>Photos</h1>
+ 			<% @photos.each do |pic|%>
+ 				<%= image_tag pic.image.url(:thumb)%>
+ 				<p><%= pic.caption%></p>
+
+ 		<%end%>
+ 	</div>
+ 	<div id= "memories">
+ 		<h1>Memories</h1>
+ 		<% @memories.each do |mem|%>
+ 			<p><%= mem.body%> - <%= mem.source%></p>
+ 		<%end%>
+ 	</div>
+ </div>
+</div>
